@@ -1,0 +1,8 @@
+<h1>{{ region.region_texto}}</h1>
+
+<ul>
+    {% for candidato in region.candidato_set.all %}
+        <li><a href="/elecciones/detCandidato/{{candidato.id}}">{{candidato.candidato_texto}} </a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'elecciones:index' %}">Ver region</a>

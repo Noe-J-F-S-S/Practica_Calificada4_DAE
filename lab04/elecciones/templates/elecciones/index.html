@@ -1,0 +1,14 @@
+<h1>Lista de regiones</h1>
+
+{%if latest_question_list %}
+    <ul>
+        {% for region in latest_question_list %}
+        <li>
+            <a href="/elecciones/{{region.id}}">{{ region.region_texto}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+<p>No hay registros.</p>
+{% endif %}
